@@ -1,0 +1,28 @@
+stateful, hanno sotto-componenti o sotto-container.
+in caso di cambio di dati vengono rieseguiti i sotto-componenti passandogli nuovi parametri (ricreati, non cambiano di stato!)
+
+should not import react-native elements (such as text)?
+
+
+
+
+class Counter extends Component {
+  state = { count: 0 };
+
+  componentWillUpdate(){
+   // Call API and Manipulate the response data if needed
+  }
+
+   const increaseOne = ()=>{ this.setState({count: this.state.count + 1}); };
+
+  render() {
+   return(
+    <View style={containerStyle}>
+      <Text style={textStyle}>Count: {this.state.count}</Text>
+      <Button btnName=”Add” onClick={this.increaseOne}></Button>
+    </View>
+  );
+};
+
+export default Counter;
+

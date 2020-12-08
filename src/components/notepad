@@ -1,0 +1,35 @@
+stateless, presentational only, creati da funzioni
+component must hook?
+
+
+
+
+
+
+
+import React from 'react';
+import { Text, View } from 'react-native';
+
+const Button = ({ btnName }) => {
+  const { containerStyle, textStyle } = styles;
+
+  return (
+   <View style={containerStyle}>
+      <Text style={textStyle}>{btnName}</Text>
+    </View>
+  );
+};
+
+const styles = {
+  containerStyle: {
+    flex: 1,
+    margin
+  },
+  textStyle: {
+    textAlign: 'center',
+    margin
+  }
+};
+export default Button;
+
+
